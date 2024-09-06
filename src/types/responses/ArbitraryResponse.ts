@@ -1,0 +1,1 @@
+export type ArbitraryResponse = Response | Promise<Response>;

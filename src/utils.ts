@@ -1,0 +1,1 @@
+export function CurrentTimestamp() { return Math.floor(Date.now() / 1000); }
