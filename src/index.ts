@@ -4,7 +4,7 @@ import { RouteRequest } from "@route";
 import type { ArbitraryResponse } from "@types";
 Configure("K8_Test_bot");
 
-console.log("Starting server");
+console.log(`Starting server on ${Bun.env.HOST}:${Bun.env.PORT}`);
 const server = Bun.serve({
     fetch(req: Request): ArbitraryResponse {
         return RouteRequest(req);
