@@ -27,10 +27,10 @@ ENV NODE_ENV=production
 #RUN bun run build
 
 # copy production dependencies and source code into final image
-FROM base AS release
-COPY --from=install /temp/prod/node_modules node_modules
-COPY --from=prerelease /usr/source/K8_Bot/index.ts .
-COPY --from=prerelease /usr/source/K8_Bot/package.json .
+# FROM base AS release
+# COPY --from=install /temp/prod/node_modules node_modules
+#COPY --from=prerelease /usr/source/K8_Bot/src/index.ts .
+#COPY --from=prerelease /usr/source/K8_Bot/package.json .
 
 # run the app
 USER bun
